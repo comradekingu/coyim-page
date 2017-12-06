@@ -9,22 +9,30 @@ permalink: /specifications/
   <h2 class="page-heading">Otrv3 Authenticated Key Exchange (AKE)</h2>
   <br>
   <h3> What is an Authenticated Key Exchange? </h3>
-  <p>Key establishment is a process by which two (or more) parties establish a shared secret. This key is later used to achieve some goal such as confidentiality or data integrity.</p>
+  <p>Key establishment is a process by which two (or more) parties establish a shared secret: a shared key. This key is later used to achieve some goal such as confidentiality or data integrity.</p>
   <p>There are two kind of key establishment protocols:
   <ul>
     <li>Key Transport: the key is created by one entity and securely transmitted to a second entity.</li>
-    <li>Key Agreement: a shared key is created by information given by both parties who jointly created it.</li>
+    <li>Key Agreement: the key is created by information given by both parties who contribute for its creation.</li>
   </ul>
   <br>
-  <p>A Key Agreement is usually done by two or more <strong>honest</strong> parties: parties that can execute the steps of a given protocol correctly. This agreement is usually referred to be "authenticated" if both of those entities are identified and either of them know that no other entity can learn the value of the shared secret key. The honest parties, therefore, have confidence of the identity of the party they are communicating with. This is usually referred as "Authenticated Key Agreement" (AK) protocol</p>
+  <p>A Key Agreement is usually done by two or more <strong>honest</strong> parties: entities that can execute the steps of a given protocol correctly. This agreement is usually referred to be "authenticated" if both of those entities are identified to one another, and either of them know that no other entity can learn the value of the shared secret key. The honest parties, therefore, have confidence in the identity of the party they are communicating with. This is usually referred as "Authenticated Key Agreement" (AK) protocol</p>
   <!--TODO: explain how authentification is achieved-->
   <br>
   <h3>How is AKE used in OTRv3</h3>
-  <p>OTRv3 achieves AKE by doing a Diffie Hellman key exchange with anonymous authetication. It is based on Direct Anonymous Attestation (DAA) and the SIGMA family of key exchange protocols (as used in the Internet Key Exchange [IKE] standard).</p>
-  <p>For the Diffie-Hellman key exchange, OTRv3 uses a particular group (1536-bit MODP group) of id 5 as defined <a href="https://www.ietf.org/rfc/rfc3526.txt" target="_blank" title"RFC3526">here </a>.
+  <p>OTRv3 achieves AKE by doing a Diffie Hellman Key Exchange with anonymous authetication. It is based on Direct Anonymous Attestation (DAA) and the SIGMA family of key exchange protocols (as used in the Internet Key Exchange [IKE] standard).</p>
+  <p>For the Diffie-Hellman key exchange, OTRv3 uses a particular group (1536-bit MODP group) of id 5 as defined <a href="https://www.ietf.org/rfc/rfc3526.txt" target="_blank" title="RFC3526">here </a>.
   <p>The general idea is that Alice and Bob do an unauthenticated Diffie-Hellman (D-H) key exchange to set up an encrypted channel, and then do mutual authentication inside that channel.</p>
   <br>
   <h3>Authenticated Key Exchange Diagram</h3>
   <br><br>
   <img src="/images/otrv3-authenticated-key-exchange.png" alt="Authenticated Key Exchange Diagram" class="diagrams"/>
+	<br>
+	<br>
+	<h3>References</h3>
+	<br>
+	<ul>
+	  <li>Law, L., Menezes, A., Qu, M., Solinas, J., Vanstone, S. (1998). <i>An Efficient Protocol for Authenticated Key Agreement</i>. Waterloo, Canada: University of Waterloo. Available <a href="http://cacr.uwaterloo.ca/techreports/1998/corr98-05.pdf" targer="_blank" title="An Efficient Protocol for Authenticated Key Agreement">here</a>.
+	  <li>Bellare, M., Rogaway, P. (1993). <i>Entity Authentication and Key Distribution</i>. Advances in Cryptology, Crypto '93 Proceedings, Springer-Verlag. Available <a href="https://cseweb.ucsd.edu/~mihir/papers/eakd.pdf" targer="_blank" title="Entity Authentication and Key Distribution">here</a>.
+  </ul>
 </div>
