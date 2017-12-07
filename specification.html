@@ -20,7 +20,7 @@ permalink: /specifications/
   <!--TODO: explain how authentification is achieved-->
   <br>
   <h3>How is AKE used in OTRv3</h3>
-  <p>OTRv3 achieves AKE by doing a Diffie Hellman Key Exchange with anonymous authetication. It is based on Direct Anonymous Attestation (DAA) and the SIGMA family of key exchange protocols (as used in the Internet Key Exchange [IKE] standard).</p>
+  <p>OTRv3 achieves AKE by doing a Diffie Hellman Key Exchange with anonymous authentication. It is based on Direct Anonymous Attestation (DAA) and the SIGMA family of key exchange protocols (as used in the Internet Key Exchange [IKE] standard).</p>
   <p>For the Diffie-Hellman key exchange, OTRv3 uses a particular group (1536-bit MODP group) of id 5 as defined <a href="https://www.ietf.org/rfc/rfc3526.txt" target="_blank" title="RFC3526">here </a>.
   <p>The general idea is that Alice and Bob do an unauthenticated Diffie-Hellman (D-H) key exchange to set up an encrypted channel, and then do mutual authentication inside that channel.</p>
   <br>
